@@ -1,14 +1,9 @@
-import { useState } from "react";
-
-function Square({ number }) {
-    const [isClicked, setIsClicked] = useState(false);
-
-    return (
-        <button className="square" onClick={() => {
-            setIsClicked(true);
-        }}>
-            {number}
-        </button>)
+function Square({ state, onClick, index }) {
+  return (
+    <button className="square" onClick={() => onClick(index)}>
+      {state}
+    </button>
+  );
 }
 
 export default Square;
